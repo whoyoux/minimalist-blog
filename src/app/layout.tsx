@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 const fontSans = FontSans({
@@ -14,8 +15,14 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-	title: "Minimalist blog",
+	title: `${siteConfig.baseTitle}`,
 	description: "A minimalist blog built with Next.js and MDX by whx",
+	authors: [
+		{
+			name: "whx",
+			url: "https://whx.world",
+		},
+	],
 };
 
 export default function RootLayout({
